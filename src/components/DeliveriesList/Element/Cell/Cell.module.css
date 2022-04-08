@@ -1,0 +1,19 @@
+.cell {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+}
+
+.cell p {
+  padding: 0;
+  margin: 0;
+}
+
+.cellHeader {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.cellValue {
+  font-weight: 600;
+}
