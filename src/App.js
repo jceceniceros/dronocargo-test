@@ -1,19 +1,21 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
 
 import { DeliveryContextProvider } from 'src/providers/deliveries'
 
-import Home from 'src/views/Home'
+import Layout from 'src/components/Layout'
 import Shipment from 'src/views/Shipment/Show'
 import ShipmentList from 'src/views/Shipment/List'
 
 const ROUTES = (
   <Router>
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route exact path="/" element={<Navigate to="/shipments" replace />} />
 
-      <Route exact path="/shipments" element={<ShipmentList />} />
+      <Route element={<Layout />}>
+        <Route exact path="/shipments" element={<ShipmentList />} />
 
-      <Route exact path="/shipment/:id" element={<Shipment />} />
+        <Route exact path="/shipment/:id" element={<Shipment />} />
+      </Route>
     </Routes>
   </Router>
 )
