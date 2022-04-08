@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+import { DeliveryContextProvider } from 'src/providers/deliveries'
+
 import Home from 'src/views/Home'
 import Shipment from 'src/views/Shipment/Show'
 import ShipmentList from 'src/views/Shipment/List'
@@ -20,7 +22,9 @@ function App() {
   return (
     <div className="App">
       <main>
-        {ROUTES}
+        <DeliveryContextProvider>
+          {ROUTES}
+        </DeliveryContextProvider>
       </main>
     </div>
   );
