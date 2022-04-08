@@ -2,4 +2,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.companyName {
+  font-weight: bold;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user > p {
+  margin-right: 10px;
+}
+
+.user > span {
+  color: gray;
 }

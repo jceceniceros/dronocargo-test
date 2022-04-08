@@ -23,11 +23,9 @@ const ROUTES = (
 function App() {
   return (
     <div className="App">
-      <main>
-        <DeliveryContextProvider>
-          {ROUTES}
-        </DeliveryContextProvider>
-      </main>
+      <DeliveryContextProvider>
+        {ROUTES}
+      </DeliveryContextProvider>
     </div>
   );
 }
