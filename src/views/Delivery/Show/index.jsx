@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import DeliveryListElement from "src/components/DeliveriesList/Element";
 
 import DeliveryContext from "src/providers/deliveries";
 
-const Home = () => {
+const DeliveryView = () => {
   const routeParams = useParams();
 
   const deliveriesCtx = useContext(DeliveryContext);
@@ -12,11 +13,8 @@ const Home = () => {
   const viewContent = (delivery) ? (
     <>
       <h1>{delivery.order_id}</h1>
-      <ul>
-        {Object.entries(delivery).map(([key, value]) => (
-          <li><b>{key}</b>: {value}</li>
-        ))}
-      </ul>
+
+      <DeliveryListElement delivery={delivery} />
     </>
   ) : (
     <>
@@ -31,4 +29,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default DeliveryView;
