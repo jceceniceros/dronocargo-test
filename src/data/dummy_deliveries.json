@@ -1,50 +1,18 @@
 [
   {
-    "order_id": "001-300FCT",
-    "status": "Ready",
-    "platform": "Alpha",
-    "drone": "DJI-004Q",
-    "technician": "Ernesto García",
-    "technician_check": "Passed"
-  },
-  {
-    "order_id": "002-300FCT",
-    "status": "Ready",
-    "platform": "Alpha",
-    "drone": "DJI-004Q",
-    "technician": "Jessica Salinas",
-    "technician_check": "Passed"
-  },
-  {
-    "order_id": "003-300FCT",
-    "status": "Ready",
-    "platform": "Beta",
-    "drone": "DJI-004Q",
-    "technician": "Mariano Arribas",
-    "technician_check": "Passed"
-  },
-  {
-    "order_id": "004-300FCT",
-    "status": "Ready",
-    "platform": "Beta",
-    "drone": "DJI-004Q",
-    "technician": "Miguel Obregón",
-    "technician_check": "Passed"
-  },
-  {
-    "order_id": "005-300FCT",
-    "status": "Ready",
-    "platform": "Beta",
-    "drone": "DJI-004Q",
-    "technician": "Leonardo Flores",
-    "technician_check": "Passed"
-  },
-  {
-    "order_id": "006-300FCT",
+    "order_id": "009-300FCT",
     "status": "Ready",
     "platform": "Gamma",
     "drone": "DJI-004Q",
-    "technician": "Gerardo Torres",
+    "technician": "Ben Santana",
+    "technician_check": "Passed"
+  },
+  {
+    "order_id": "008-300FCT",
+    "status": "Ready",
+    "platform": "Gamma",
+    "drone": "DJI-004Q",
+    "technician": "Juan Reynosa",
     "technician_check": "Passed"
   },
   {
@@ -56,19 +24,51 @@
     "technician_check": "Passed"
   },
   {
-    "order_id": "008-300FCT",
-    "status": "Ready",
-    "platform": "Juan Reynosa",
-    "drone": "DJI-004Q",
-    "technician": "Ben Santana",
-    "technician_check": "Passed"
-  },
-  {
-    "order_id": "009-300FCT",
+    "order_id": "006-300FCT",
     "status": "Ready",
     "platform": "Gamma",
     "drone": "DJI-004Q",
-    "technician": "Ben Santana",
+    "technician": "Gerardo Torres",
+    "technician_check": "Passed"
+  },
+  {
+    "order_id": "005-300FCT",
+    "status": "Ready",
+    "platform": "Beta",
+    "drone": "DJI-004Q",
+    "technician": "Leonardo Flores",
+    "technician_check": "Passed"
+  },
+  {
+    "order_id": "004-300FCT",
+    "status": "Ready",
+    "platform": "Beta",
+    "drone": "DJI-004Q",
+    "technician": "Miguel Obregón",
+    "technician_check": "Passed"
+  },
+  {
+    "order_id": "003-300FCT",
+    "status": "Ready",
+    "platform": "Beta",
+    "drone": "DJI-004Q",
+    "technician": "Mariano Arribas",
+    "technician_check": "Passed"
+  },
+  {
+    "order_id": "002-300FCT",
+    "status": "Ready",
+    "platform": "Alpha",
+    "drone": "DJI-004Q",
+    "technician": "Jessica Salinas",
+    "technician_check": "Passed"
+  },
+  {
+    "order_id": "001-300FCT",
+    "status": "Ready",
+    "platform": "Alpha",
+    "drone": "DJI-004Q",
+    "technician": "Ernesto García",
     "technician_check": "Passed"
   }
 ]

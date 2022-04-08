@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-d
 import { DeliveryContextProvider } from 'src/providers/deliveries'
 
 import Layout from 'src/components/Layout'
-import Shipment from 'src/views/Shipment/Show'
-import ShipmentList from 'src/views/Shipment/List'
+import DeliveryView from 'src/views/Delivery/Show'
+import DeliveryListView from 'src/views/Delivery/List'
 
 const ROUTES = (
   <Router>
@@ -12,9 +12,9 @@ const ROUTES = (
       <Route exact path="/" element={<Navigate to="/shipments" replace />} />
 
       <Route element={<Layout />}>
-        <Route exact path="/shipments" element={<ShipmentList />} />
+        <Route exact path="/shipments" element={<DeliveryListView />} />
 
-        <Route exact path="/shipment/:id" element={<Shipment />} />
+        <Route exact path="/shipment/:id" element={<DeliveryView />} />
       </Route>
     </Routes>
   </Router>

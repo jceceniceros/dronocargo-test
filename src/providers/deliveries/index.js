@@ -1,10 +1,11 @@
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 
 import DUMMY_DELIVERIES from 'src/data/dummy_deliveries.json'
 
 const DeliveryContext = createContext({
   deliveries: [],
   getDeliveryByOrderId: (orderId) => { },
+  addNewDelivery: (newDeliveryData) => { },
 });
 
 const retrieveStoredDeliveries = () => {
@@ -17,19 +18,39 @@ const storeDeliveries = (deliveries) => {
   localStorage.setItem('deliveries', serializedDeliveries);
 }
 
-storeDeliveries(DUMMY_DELIVERIES)
+const DEFAULT_DELIVERY_STATUS = 'Ready';
+const DEFAULT_DELIVERY_TECHNICIAN_CHECK = 'Passed';
+
+if (localStorage.getItem('deliveries') === null) {
+  storeDeliveries(DUMMY_DELIVERIES)
+}
 
 const DeliveryContextProvider = (props) => {
-  const deliveries = retrieveStoredDeliveries();
+  const [deliveries, setDeliveries] = useState(retrieveStoredDeliveries());
 
   const getDeliveryByOrderId = (orderId) => {
     const storedDeliveries = retrieveStoredDeliveries();
     return storedDeliveries.find((delivery) => delivery.order_id === orderId);
   }
 
+  const addNewDelivery = (newDeliveryData) => {
+    const newDelivery = {
+      ...newDeliveryData,
+      status: DEFAULT_DELIVERY_STATUS,
+      technician_check: DEFAULT_DELIVERY_TECHNICIAN_CHECK,
+    };
+
+    const storedDeliveries = retrieveStoredDeliveries();
+    storedDeliveries.unshift(newDelivery);
+
+    storeDeliveries(storedDeliveries);
+    setDeliveries(storedDeliveries);
+  }
+
   const context = {
     deliveries,
-    getDeliveryByOrderId
+    getDeliveryByOrderId,
+    addNewDelivery
   };
 
   return (
