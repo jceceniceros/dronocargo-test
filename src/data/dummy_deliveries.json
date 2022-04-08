@@ -8,7 +8,7 @@
     "technician_check": "Passed"
   },
   {
-    "order_id": "009-300FCT",
+    "order_id": "002-300FCT",
     "status": "Ready",
     "platform": "Alpha",
     "drone": "DJI-004Q",
@@ -16,7 +16,7 @@
     "technician_check": "Passed"
   },
   {
-    "order_id": "009-300FCT",
+    "order_id": "003-300FCT",
     "status": "Ready",
     "platform": "Beta",
     "drone": "DJI-004Q",
@@ -24,7 +24,7 @@
     "technician_check": "Passed"
   },
   {
-    "order_id": "009-300FCT",
+    "order_id": "004-300FCT",
     "status": "Ready",
     "platform": "Beta",
     "drone": "DJI-004Q",
@@ -32,7 +32,7 @@
     "technician_check": "Passed"
   },
   {
-    "order_id": "009-300FCT",
+    "order_id": "005-300FCT",
     "status": "Ready",
     "platform": "Beta",
     "drone": "DJI-004Q",
@@ -40,7 +40,7 @@
     "technician_check": "Passed"
   },
   {
-    "order_id": "009-300FCT",
+    "order_id": "006-300FCT",
     "status": "Ready",
     "platform": "Gamma",
     "drone": "DJI-004Q",
@@ -48,7 +48,7 @@
     "technician_check": "Passed"
   },
   {
-    "order_id": "009-300FCT",
+    "order_id": "007-300FCT",
     "status": "Ready",
     "platform": "Gamma",
     "drone": "DJI-004Q",
@@ -56,7 +56,7 @@
     "technician_check": "Passed"
   },
   {
-    "order_id": "009-300FCT",
+    "order_id": "008-300FCT",
     "status": "Ready",
     "platform": "Juan Reynosa",
     "drone": "DJI-004Q",

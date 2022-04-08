@@ -4,6 +4,7 @@ import DUMMY_DELIVERIES from 'src/data/dummy_deliveries.json'
 
 const DeliveryContext = createContext({
   deliveries: [],
+  getDeliveryByOrderId: (orderId) => { },
 });
 
 const retrieveStoredDeliveries = () => {
@@ -21,8 +22,14 @@ storeDeliveries(DUMMY_DELIVERIES)
 const DeliveryContextProvider = (props) => {
   const deliveries = retrieveStoredDeliveries();
 
+  const getDeliveryByOrderId = (orderId) => {
+    const storedDeliveries = retrieveStoredDeliveries();
+    return storedDeliveries.find((delivery) => delivery.order_id === orderId);
+  }
+
   const context = {
-    deliveries
+    deliveries,
+    getDeliveryByOrderId
   };
 
   return (
