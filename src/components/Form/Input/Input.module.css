@@ -5,3 +5,18 @@
   height: 20px;
   padding: 10px 15px;
 }
+
+.wrapper {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: gray;
+}
+
+.withIcon {
+  padding-left: 45px;
+}

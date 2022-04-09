@@ -1,3 +1,5 @@
+import SearchIcon from '@mui/icons-material/Search';
+
 import Breadcrumbs from "src/components/Breadcrumbs";
 import Button from "src/components/Button";
 import FormInput from "src/components/Form/Input";
@@ -14,6 +16,7 @@ const Toolbar = (props) => {
 
       <div className={classes.tools}>
         <FormInput
+          icon={<SearchIcon />}
           inputAttrs={{
             type: 'text',
             placeholder: 'Search'

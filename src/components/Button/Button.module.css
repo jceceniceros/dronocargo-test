@@ -10,12 +10,13 @@
 }
 
 .white {
-  background: white;
+  background-color: white;
   border-color: lightgray;
+  font-weight: 600;
 }
 
 .green {
-  background: #307460;
+  background-color: #307460;
   border-color: #307460;
   color: white;
 }
