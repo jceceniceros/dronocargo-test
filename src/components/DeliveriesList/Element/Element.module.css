@@ -10,3 +10,7 @@
 .element:last-child {
   border: none
 }
+
+.link {
+  text-decoration: none;
+}

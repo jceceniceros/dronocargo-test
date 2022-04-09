@@ -1,9 +1,11 @@
 import { useState } from 'react'
 
-import { Box, Button, Menu, MenuItem } from '@mui/material'
+import { Box, Menu, MenuItem } from '@mui/material'
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
+
+import Button from 'src/components/Button';
 
 const Dropdown = (props) => {
   const { buttonId, buttonLabel, menuId, menuActions } = props
@@ -19,7 +21,11 @@ const Dropdown = (props) => {
   }
 
   const open = Boolean(anchorEl)
-  const buttonIcon = open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />
+  const buttonIcon = open ? (
+    <KeyboardArrowUpIcon fontSize="inherit" color="inherit" />
+  ) : (
+    <KeyboardArrowDownIcon fontSize="inherit" color="inherit" />
+  );
 
   return (
     <Box>
@@ -28,11 +34,11 @@ const Dropdown = (props) => {
         aria-controls={open ? menuId : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        variant="outlined"
-        endIcon={buttonIcon}
+        variant="white"
         onClick={handleClick}
       >
         {buttonLabel}
+        <span>{buttonIcon}</span>
       </Button>
 
       <Menu
@@ -51,7 +57,7 @@ const Dropdown = (props) => {
         }}
       >
         {menuActions.map((action) => (
-          <MenuItem onClick={action.onClick}>{action.label}</MenuItem>
+          <MenuItem key={`${buttonId}-${action.label}`} onClick={action.onClick}>{action.label}</MenuItem>
         ))}
       </Menu>
     </Box>
