@@ -10,13 +10,11 @@ const Input = (props) => {
 
   const input = <input className={inputClasses.join(' ')} {...props.inputAttrs} />
 
-  return (icon) ? (
+  return (!icon) ? input : (
     <div className={classes.wrapper}>
       <span className={classes.icon}>{icon}</span>
       {input}
     </div>
-  ) : (
-    {input}
   )
 }
 
