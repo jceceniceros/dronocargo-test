@@ -1,5 +1,6 @@
 import Breadcrumbs from "src/components/Breadcrumbs";
 import Button from "src/components/Button";
+import FormInput from "src/components/Form/Input";
 
 import classes from './Toolbar.module.css';
 
@@ -12,6 +13,12 @@ const Toolbar = (props) => {
       </Breadcrumbs>
 
       <div className={classes.tools}>
+        <FormInput
+          inputAttr={{
+            type: 'text',
+            placeholder: 'Search'
+          }}
+        />
         <Button variant="green" onClick={props.onClickNewDeliveryButton}>New delivery</Button>
       </div>
     </div>

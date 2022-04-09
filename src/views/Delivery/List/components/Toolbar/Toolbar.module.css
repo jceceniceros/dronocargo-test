@@ -9,5 +9,13 @@
 .tools {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: flex-end;
+}
+
+.tools > * {
+  margin-right: 10px;
+}
+
+.tools > :last-child {
+  margin-right: 0;
 }
