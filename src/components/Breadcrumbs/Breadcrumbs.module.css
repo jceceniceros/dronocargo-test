@@ -1,0 +1,16 @@
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.breadcrumbs > p {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+.breadcrumbs > p:last-child {
+  color: gray;
+  margin-right: 0;
+}
