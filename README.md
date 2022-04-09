@@ -14,6 +14,28 @@ Exceptions:
 - The modal is based on a react course that I took some time ago.
 - Dropdown component is based on the [MUI Menu](https://mui.com/material-ui/react-menu/)
 
+## How to run
+
+- Clone the repository
+
+```
+git clone git@github.com:jceceniceros/dronocargo-test.git dronocargo
+```
+
+- Install the dependencies
+
+```
+cd dronocargo
+npm install
+```
+
+- Start the server
+```
+npm start
+```
+
+- Visit [http://localhost:3000](https://localhost:3000) in your browser
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
