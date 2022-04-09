@@ -26,14 +26,14 @@ const Form = (props) => {
     <Modal onClickBackdrop={props.onCloseForm} onCloseModal={props.onCloseForm}>
       <form onSubmit={handleFormSubmit}>
         <ModalBody>
-          <h2>New delivery</h2>
-          <p>Please select the order ID and a technician to deploy the cargo. All elements are mandatory.</p>
+          <h2 className={classes.header}>New delivery</h2>
+          <p className={classes.subtitle}>Please select the order ID and a technician to deploy the cargo. All elements are mandatory.</p>
 
           <FormRow>
             <FormControl>
               <FormLabel htmlFor="order-id">Order ID</FormLabel>
               <FormInput
-                inputAttr={{
+                inputAttrs={{
                   type: 'text',
                   name: 'order_id',
                   id: 'order-id',
