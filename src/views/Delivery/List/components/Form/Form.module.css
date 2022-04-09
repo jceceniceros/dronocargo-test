@@ -1,0 +1,13 @@
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.actions > * {
+  margin-right: 10px;
+}
+
+.actions > *:last-child {
+  margin-right: 0;
+}

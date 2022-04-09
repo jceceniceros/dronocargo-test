@@ -9,6 +9,8 @@ import FormSelect from "src/components/Form/Select";
 
 import FORM_OPTIONS from "src/data/FormOptions";
 
+import classes from "./Form.module.css";
+
 const Form = (props) => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -84,7 +86,7 @@ const Form = (props) => {
         </ModalBody>
 
         <ModalFooter>
-          <div>
+          <div className={classes.actions}>
             <Button variant="white" onClick={props.onCloseForm}>Cancel</Button>
             <Button variant="green" btnAttrs={{ type: "submit" }}>Create new delivery</Button>
           </div>
