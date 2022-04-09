@@ -1,9 +1,21 @@
 .button {
-  border: none;
-  background: #307460;
+  border-style: solid;
+  border-width: 1px;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  color: white;
   font-weight: 400;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.50);
+  color: black;
+}
+
+.white {
+  background: white;
+  border-color: lightgray;
+}
+
+.green {
+  background: #307460;
+  border-color: #307460;
+  color: white;
 }

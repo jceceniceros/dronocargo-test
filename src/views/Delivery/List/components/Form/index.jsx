@@ -1,5 +1,6 @@
 import Modal, { ModalBody, ModalFooter } from "src/components/Modal";
 
+import Button from "src/components/Button";
 import FormControl from "src/components/Form/Control";
 import FormInput from "src/components/Form/Input";
 import FormLabel from "src/components/Form/Label";
@@ -84,8 +85,8 @@ const Form = (props) => {
 
         <ModalFooter>
           <div>
-            <button onClick={props.onCloseForm}>Cancel</button>
-            <button type="submit">Create new delivery</button>
+            <Button variant="white" onClick={props.onCloseForm}>Cancel</Button>
+            <Button variant="green" btnAttrs={{ type: "submit" }}>Create new delivery</Button>
           </div>
         </ModalFooter>
       </form>

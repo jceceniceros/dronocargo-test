@@ -12,7 +12,7 @@ const Toolbar = (props) => {
       </Breadcrumbs>
 
       <div className={classes.tools}>
-        <Button onClick={props.onClickNewDeliveryButton}>New delivery</Button>
+        <Button variant="green" onClick={props.onClickNewDeliveryButton}>New delivery</Button>
       </div>
     </div>
   );
