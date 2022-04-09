@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Dronocargo Home Test
+
+- **Author**: Juan Carlos Espinosa Ceniceros
+- **LinkedIn**: [jceceniceros](https://www.linkedin.com/in/jceceniceros)
+
+Tried to implement the most from scratch.
+
+External libraries:
+- [React Router](https://reactrouter.com/)
+- [MUI](https://mui.com)
+
+Exceptions:
+- The icons are from [MUI Icons](https://mui.com/components/material-icons)
+- The modal is based on a react course that I took some time ago.
+- Dropdown component is based on the [MUI Menu](https://mui.com/material-ui/react-menu/)
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
