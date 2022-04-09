@@ -5,7 +5,12 @@ const DeliveryList = (props) => {
 
   return (
     <section>
-      {deliveries.map((delivery) => <DeliveryListElement delivery={delivery} />)}
+      {deliveries.map((delivery) => (
+        <DeliveryListElement
+          key={`delivery-${delivery.order_id}`}
+          delivery={delivery}
+        />
+      ))}
     </section>
   )
 }

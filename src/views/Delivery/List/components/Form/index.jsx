@@ -37,7 +37,7 @@ const Form = (props) => {
                   type: 'text',
                   name: 'order_id',
                   id: 'order-id',
-                  required: 'true'
+                  required: 'required'
                 }}
               />
             </FormControl>
@@ -45,14 +45,13 @@ const Form = (props) => {
             <FormControl>
               <FormLabel htmlFor="technician">Technician</FormLabel>
               <FormSelect
+                options={FORM_OPTIONS.technician}
                 selectAttrs={{
                   name: 'technician',
                   id: 'technician',
-                  required: 'true',
+                  required: 'required',
                 }}
-              >
-                {FORM_OPTIONS.technician.map((technician) => <option>{technician}</option>)}
-              </FormSelect>
+              />
             </FormControl>
           </FormRow>
 
@@ -60,27 +59,25 @@ const Form = (props) => {
             <FormControl>
               <FormLabel htmlFor="platform">Platform</FormLabel>
               <FormSelect
+                options={FORM_OPTIONS.platform}
                 selectAttrs={{
                   name: 'platform',
                   id: 'platform',
-                  required: 'true',
+                  required: 'required',
                 }}
-              >
-                {FORM_OPTIONS.platform.map((platform) => <option>{platform}</option>)}
-              </FormSelect>
+              />
             </FormControl>
 
             <FormControl>
               <FormLabel htmlFor="drone">Drone</FormLabel>
               <FormSelect
+                options={FORM_OPTIONS.drone}
                 selectAttrs={{
                   name: 'drone',
                   id: 'drone',
-                  required: 'true',
+                  required: 'required',
                 }}
-              >
-                {FORM_OPTIONS.drone.map((drone) => <option>{drone}</option>)}
-              </FormSelect>
+              />
             </FormControl>
           </FormRow>
         </ModalBody>

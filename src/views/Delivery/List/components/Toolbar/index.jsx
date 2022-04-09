@@ -14,7 +14,7 @@ const Toolbar = (props) => {
 
       <div className={classes.tools}>
         <FormInput
-          inputAttr={{
+          inputAttrs={{
             type: 'text',
             placeholder: 'Search'
           }}

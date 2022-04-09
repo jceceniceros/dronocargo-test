@@ -1,5 +1,7 @@
 import DUMMY_DELIVERIES from 'src/data/dummy_deliveries.json';
 
+const toOption = (value) => ({ value: value, label: value });
+
 const DRONES = new Set();
 const TECHNICIANS = new Set();
 const PLATFORMS = new Set();
@@ -11,9 +13,10 @@ for (let delivery of DUMMY_DELIVERIES) {
 }
 
 const FORM_OPTIONS = {
-  drone: [...DRONES],
-  technician: [...TECHNICIANS],
-  platform: [...PLATFORMS]
+  drone: [...DRONES].map(toOption),
+  technician: [...TECHNICIANS].map(toOption),
+  platform: [...PLATFORMS].map(toOption)
 };
+
 
 export default FORM_OPTIONS;
