@@ -14,13 +14,18 @@ const Backdrop = (props) => {
   );
 };
 
+const ModalBody = (props) => <div className={classes.body}>{props.children}</div>;
+
+const ModalFooter = (props) => <div className={classes.footer}>{props.children}</div>;
+
 const ModalOverlay = (props) => {
   return (
     <div className={classes.modal}>
       <span className={classes.close} onClick={props.onClose}>
         <CloseIcon color="inherit" fontSize="inherit" />
       </span>
-      <div className={classes.content}>{props.children}</div>
+
+      {props.children}
     </div>
   );
 };
@@ -41,3 +46,7 @@ const Modal = (props) => {
 };
 
 export default Modal;
+export {
+  ModalBody,
+  ModalFooter
+}
