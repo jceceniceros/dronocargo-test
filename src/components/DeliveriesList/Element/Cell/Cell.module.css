@@ -11,9 +11,13 @@
 
 .cellHeader {
   color: gray;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .cellValue {
+  font-weight: 500;
+}
+
+.cell:first-child .cellValue {
   font-weight: 600;
 }

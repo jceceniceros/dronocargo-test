@@ -3,11 +3,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
-.companyName {
+.companyName > p {
   font-weight: bold;
+  margin: 0;
 }
 
 .user {
@@ -17,7 +17,7 @@
 }
 
 .user > p {
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
 .user > span {

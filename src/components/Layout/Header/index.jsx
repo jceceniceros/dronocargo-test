@@ -5,7 +5,9 @@ import classes from './Header.module.css'
 const Header = () => {
   return (
     <header className={classes.header}>
-      <p className={classes.companyName}>Dronocargo</p>
+      <div className={classes.companyName}>
+        <p>Dronocargo</p>
+      </div>
 
       <div className={classes.user}>
         <p>Regina Cepeda</p>
