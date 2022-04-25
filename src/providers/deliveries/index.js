@@ -1,37 +1,20 @@
-import { createContext, useState } from 'react';
+import { createContext } from 'react';
 
 import DUMMY_DELIVERIES from 'src/data/dummy_deliveries.json'
-
-const DeliveryContext = createContext({
-  deliveries: [],
-  getDeliveryByOrderId: (orderId) => { },
-  addNewDelivery: (newDeliveryData) => { },
-});
-
-const retrieveStoredDeliveries = () => {
-  const serializedDeliveries = localStorage.getItem('deliveries');
-  return JSON.parse(serializedDeliveries);
-};
-
-const storeDeliveries = (deliveries) => {
-  const serializedDeliveries = JSON.stringify(deliveries);
-  localStorage.setItem('deliveries', serializedDeliveries);
-}
+import useLocalStorage from 'src/hooks/useLocalStorage';
 
 const DEFAULT_DELIVERY_STATUS = 'Ready';
 const DEFAULT_DELIVERY_TECHNICIAN_CHECK = 'Passed';
+const INITIAL_CONTEXT_VALUE = {
+  deliveries: [],
+  getDeliveryByOrderId: (orderId) => { },
+  addNewDelivery: (newDeliveryData) => { },
+};
 
-if (localStorage.getItem('deliveries') === null) {
-  storeDeliveries(DUMMY_DELIVERIES)
-}
+const DeliveryContext = createContext(INITIAL_CONTEXT_VALUE);
 
 const DeliveryContextProvider = (props) => {
-  const [deliveries, setDeliveries] = useState(retrieveStoredDeliveries());
-
-  const getDeliveryByOrderId = (orderId) => {
-    const storedDeliveries = retrieveStoredDeliveries();
-    return storedDeliveries.find((delivery) => delivery.order_id === orderId);
-  }
+  const [deliveries, saveDeliveries, getDeliveries] = useLocalStorage('deliveries', DUMMY_DELIVERIES);
 
   const addNewDelivery = (newDeliveryData) => {
     const newDelivery = {
@@ -40,21 +23,24 @@ const DeliveryContextProvider = (props) => {
       technician_check: DEFAULT_DELIVERY_TECHNICIAN_CHECK,
     };
 
-    const storedDeliveries = retrieveStoredDeliveries();
+    const storedDeliveries = getDeliveries();
     storedDeliveries.unshift(newDelivery);
-
-    storeDeliveries(storedDeliveries);
-    setDeliveries(storedDeliveries);
+    saveDeliveries(storedDeliveries);
   }
 
-  const context = {
-    deliveries,
-    getDeliveryByOrderId,
-    addNewDelivery
-  };
+  const getDeliveryByOrderId = (orderId) => {
+    const storedDeliveries = getDeliveries();
+    return storedDeliveries.find((delivery) => delivery.order_id === orderId);
+  }
 
   return (
-    <DeliveryContext.Provider value={context}>
+    <DeliveryContext.Provider
+      value={{
+        deliveries,
+        getDeliveryByOrderId,
+        addNewDelivery
+      }}
+    >
       {props.children}
     </DeliveryContext.Provider>
   );

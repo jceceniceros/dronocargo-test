@@ -10,13 +10,9 @@ const DeliveryView = () => {
   const delivery = deliveriesCtx.getDeliveryByOrderId(routeParams.id)
 
   const viewContent = (delivery) ? (
-    <>
-      <h1>{delivery.order_id}</h1>
-    </>
+    <h1>{delivery.order_id}</h1>
   ) : (
-    <>
-      <h1>Order ID not found</h1>
-    </>
+    <h1>Order ID not found</h1>
   )
 
   return (
